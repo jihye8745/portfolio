@@ -2,10 +2,11 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import Main from './Main'
 import Side from './Side'
+import "./style.css"
 
 const Portfolio = () => {
   return (
-    <div className='wrap'>
+    <div id='wrap'>
       <header>
         <h1>
           <Link to="/profile/home">
@@ -14,12 +15,15 @@ const Portfolio = () => {
         </h1>
       </header>
 
-      <Routes>
+      <div className="ms_inner">
+        <Routes>
           <Route path="/:subPage/:mainPage" element={<Main />} />
           <Route path="/" element={<Main />} />
         </Routes>
         
-      <Side/>
+        <Side/>
+      </div>
+      
     </div>
   )
 }

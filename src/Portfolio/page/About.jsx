@@ -50,13 +50,13 @@ const About = () => {
   return (
     <div className='about'>
       {/* aboutme */}
-      <div className="aboutme">
+      <div className="aboutMe">
         <div className="title">
           <h4>About me</h4>
         </div>
         <div className="about_contents">
           <figure>
-            <img src="#" alt="a_img" />
+            <img src="/about/profile.jpg" alt="a_img" />
           </figure>
           <div className="text">
             <h2>안녕하세요. 웹퍼블리셔 강지혜입니다.</h2>
@@ -122,20 +122,20 @@ const About = () => {
             <h4>Experience</h4>
           </div>
           <div className="exp_contents">
-            <div className="learn">
+            <div className="sub_title learn">
               <span>Learning</span>
               <ul>
                 <li>
-                  웹 퍼블리싱 UI·UX 심화 과정
+                  <span>웹 퍼블리싱 UI·UX 심화 과정</span>
                   <span>2025.06</span>
                 </li>
                 <li>
-                  웹퍼블리싱 기초 과정
+                  <span>웹퍼블리싱 기초 과정</span>
                   <span>2025.01</span>
                 </li>
               </ul>
             </div>
-            <div className="work">
+            <div className="sub_title work">
               <span>Work Experience</span>
               <div className="work_info">
                 <span>기획/마케팅분야</span>

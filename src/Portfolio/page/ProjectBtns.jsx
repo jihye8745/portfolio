@@ -20,7 +20,7 @@ const ProjecBtns = ({categories, catClick}) => {
       >
         {
         categories.map((item,i)=>(
-          <SwiperSlide style={{width: 'auto'}}>
+          <SwiperSlide style={{width: 'auto'}} className='category_item'>
             <button type='button' className="c_item" key={i} onClick={()=>{catClick(item)}}>
               <figure><img src="/project/c_icon.png" alt="cicon" /></figure>
               {item}

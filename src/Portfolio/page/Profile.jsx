@@ -6,7 +6,7 @@ const Profile = () => {
       {/* top */}
       <div className="top">
         <div className="today">
-          <span>Today is...</span>
+          <span>Today is..</span>
           <figure>
             <img src="/common/t_icon.png" alt="tIcon" />
           </figure>
@@ -26,9 +26,10 @@ const Profile = () => {
             ㄴr를 소개할게요 ^-^
           </p>
         </div>
-        {/* //top */}
+      </div>
+      {/* //top */}
 
-        {/* bottom */}
+      {/* bottom */}
         <div className="bottom">
           <div className="history">
             <div className="h_left">
@@ -49,7 +50,6 @@ const Profile = () => {
           </div>
         </div>
         {/* //bottom */}
-      </div>
     </div>
   )
 }

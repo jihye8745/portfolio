@@ -1,6 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Put from '../component/Put';
+import CommentList from '../component/CommentList';
 
 const Home = () => {
+
+  const [comment, setComment] = useState([]);
+
+  const addComment = (inputValue) => {
+    const newComment = {id: Date.now(), inputValue}
+    setComment([...comment, newComment])
+  };
+
   return (
     <div className='home'>
       <div className="post">
@@ -45,15 +55,11 @@ const Home = () => {
           </div>
       </div>
 
-      {/* ★★★TodoLIst 참고해서 댓글입력창 고민해보기★★★ */}
       <div className="comment">
         <h3>일촌평</h3>
-        <div className="commet_text">
-          <ul>
-            <li>너의 노력과 열정.. 감동이야..★ 우리 오래가자 일촌 &#40;너의절친 권지연&#41;</li>
-            <li>오늘도 최선을 다한 너를 위해 응원해!! ☆☆☆ &#40;광팬 고동학&#41;</li>
-            <li>홈 쫌 예쁘다? 잘 보고 간다~♥ &#40;막내 김유경&#41;</li>
-          </ul>
+        <Put addComment={addComment}/>
+        <div className="comment_text">
+          <CommentList comment={comment}/>
         </div>
       </div>
     </div>
