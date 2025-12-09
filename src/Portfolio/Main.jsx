@@ -61,7 +61,7 @@ const Main = () => {
       description: "사이트 기획·디자인 및 리액트 기반 반응형웹 작업",
       img: "/project/p4.jpg",
       btns: [
-        { name: "사이트", outlink: "https://jihye8745.github.io/portfolio/" },
+        { name: "사이트", outlink: "https://jihyeportfolio.netlify.app/" },
         { name: "코드", outlink: "https://github.com/jihye8745/portfolio.git" },
       ]
     },
