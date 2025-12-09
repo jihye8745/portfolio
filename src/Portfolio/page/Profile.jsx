@@ -15,7 +15,7 @@ const Profile = () => {
 
         <div className="p_img">
           <figure>
-            <img src="/common/profle.jpg" alt="profle" />
+            <img src="/common/profile.jpg" alt="profle" />
           </figure>
         </div>
 

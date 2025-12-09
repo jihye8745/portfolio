@@ -11,7 +11,7 @@ const ProjecBtns = ({categories, catClick}) => {
 
       <Swiper pagination={true} modules={[Pagination]} className="project_category"
         breakpoints={{
-          1201: {
+          1025: {
             enabled: false,
           },
         }}

@@ -20,9 +20,9 @@ const Main = () => {
     {
       id: 1,
       project: "Main Project",
-      category: "모머위켄드 웹 리디자인",
+      category: "모머 웹 리디자인",
       period: "2025.08.04~ 08.20",
-      description: "식기 브랜드 메인, 서브1, 서브2 페이지 기획·리디자인 및 반응형웹 작업",
+      description: "식기 브랜드 메인, 서브1, 서브2 페이지\n기획·리디자인 및 반응형웹 작업",
       img: "/project/p1.jpg",
       btns: [
         { name: "기획안", outlink: "/project/momur.pdf" },
@@ -85,12 +85,14 @@ const Main = () => {
       <div className="subContents">
         <div className="s_line">
           <div className="s_bg">
-            <div className="t_title">
-              <h2>익숙함 보다는 성장을 선택하는 사람</h2>
-            </div>
-            <div className="s_text">
-              <span>TODAY <strong className='orange'>1000</strong></span>
-              <span>TOTAL <strong>123456</strong></span>
+            <div className="text_wrap">
+              <div className="t_title">
+                <h2>익숙함 보다는 성장을 선택하는 사람</h2>
+              </div>
+              <div className="s_text">
+                <span>TODAY <strong className='orange'>1000</strong></span>
+                <span>TOTAL <strong>123456</strong></span>
+              </div>
             </div>
             <div className="s_inner">
               {currentSub === 'profile' && <Profile />}
@@ -131,12 +133,14 @@ const Main = () => {
             </div>
           </div>
         </div>
+
+        {/* main_btns */}
+      <Btns />
+      {/* //main_btns */}
       </div>
       {/* //main_contents */}
 
-      {/* main_btns */}
-      <Btns />
-      {/* //main_btns */}
+      
     </div>
   )
 }

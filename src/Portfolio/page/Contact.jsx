@@ -17,7 +17,7 @@ const Contact = () => {
 
       <div className="contact_info">
         <span>
-          공새설정 : 전체공개
+          공개설정 : 전체공개
         </span>
 
         <div className="info">
