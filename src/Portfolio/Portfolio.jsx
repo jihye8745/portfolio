@@ -9,7 +9,7 @@ const Portfolio = () => {
     <div id='wrap'>
       <header>
         <h1>
-          <Link to="/profile/home">
+          <Link to="https://jihyeportfolio.netlify.app/profile/home">
             <img src="/common/logo.png" alt="logo" />
           </Link>
         </h1>

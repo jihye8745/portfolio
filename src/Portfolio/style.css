@@ -669,7 +669,7 @@ header h1 {
 .about .skill .skill_contents ul li {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .about .skill .skill_contents ul li figure {
@@ -779,7 +779,6 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.875rem;
   line-height: 1.5rem;
 }
 
@@ -1304,14 +1303,10 @@ header h1 {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .projectBtns .swiper-wrapper .category_item button {
-    font-size: 0.9rem;
-  }
-
-  .about .detail .experience .exp_contents .work ul li {
     font-size: 0.9rem;
   }
 
@@ -1412,6 +1407,11 @@ header h1 {
 
   .subContents .s_inner {
     height: calc(100% - 32px);
+    padding: 8px;
+  }
+
+  .mainContents .m_inner {
+    padding: 8px;
   }
 
   .profile .bottom {
