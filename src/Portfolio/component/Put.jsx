@@ -13,8 +13,7 @@ const Put = ({addComment}) => {
 
   return (
     <div className='put'>
-      <span>답글</span>
-      <input type="text" value={inputValue}
+      <input name='com' type="text" placeholder="일촌평 남기기" value={inputValue}
       onChange={(event)=>setInputValue(event.target.value)}
       />
 

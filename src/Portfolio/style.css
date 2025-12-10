@@ -48,7 +48,7 @@
 #wrap {
   width: 100%;
   height: 100vh;
-  min-height: 720px;
+  min-height: 665px;
   background-image: url(/common/bg.jpg);
   background-position: center;
   background-size: cover;
@@ -490,7 +490,7 @@ header h1 {
 
 .home .post {
   display: flex;
-  gap: 0 12px;
+  gap: 0 1rem;
   flex-wrap: wrap;
 }
 
@@ -503,7 +503,7 @@ header h1 {
 }
 
 .home .post .p_left {
-  width: calc(50% - 6px);
+  flex-grow: 1;
   border-top: 1px solid #CDCDCD;
   padding-top: 0.875rem
 }
@@ -529,7 +529,7 @@ header h1 {
 }
 
 .home .post .p_right {
-  width: calc(50% - 6px);
+  flex-grow: 1.5;
 }
 
 .home .post .p_right ul li {
@@ -571,7 +571,11 @@ header h1 {
 
 .home .comment ul li {
   font-family: var(--kr_R);
-  line-height: 40px;
+  line-height: 160%;
+}
+
+.home .comment ul li:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .home .comment ul li span {
@@ -592,10 +596,16 @@ header h1 {
 .home .put input {
   flex-grow: 1;
   height: 24px;
+  min-width: 0;
 }
 
 .home .put button {
   cursor: pointer;
+  font-family: var(--pixel_R);
+  font-size: 0.875rem;
+  padding: 2px 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .about .title {
@@ -612,24 +622,32 @@ header h1 {
 .about .aboutMe .about_contents {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
+}
+
+.about .aboutMe .about_contents figure {
+  flex-basis: 190px;
+  flex-grow: 1;
 }
 
 .about .aboutMe .about_contents figure img {
-  width: 192px;
-  max-width: 100%;
   border: 1px solid #CDCDCD;
+  width: 100%;
 }
 
 .about .aboutMe .about_contents .text {
+  flex-basis: 420px;
   flex-grow: 1;
-  width: 490px;
 }
 
 .about .aboutMe .about_contents .text h2 {
   font-size: 1.5rem;
   font-family: var(--kr_B);
   margin-bottom: 2rem;
+}
+
+.about .aboutMe .about_contents .text h2 br {
+  display: none;
 }
 
 .about .aboutMe .about_contents .text p {
@@ -655,7 +673,7 @@ header h1 {
 }
 
 .about .skill .skill_contents ul li figure {
-  width: 80px;
+  flex-basis: 80px;
   border: 1px solid #CDCDCD;
 }
 
@@ -684,7 +702,7 @@ header h1 {
 }
 
 .about .detail>div {
-  width: 50%
+  flex-basis: 50%;
 }
 
 .about .detail>div {
@@ -827,7 +845,7 @@ header h1 {
 }
 
 .projectList .p_item .p_contents figure {
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .projectList .p_item .p_contents figure img {
@@ -835,7 +853,7 @@ header h1 {
 }
 
 .projectList .p_item .p_contents .text {
-  width: 50%;
+  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -907,7 +925,7 @@ header h1 {
 }
 
 .contact .contact_title {
-  padding: 70px 0;
+  padding: 4rem 0;
   text-align: center;
 }
 
@@ -935,10 +953,20 @@ header h1 {
   margin-bottom: 20px;
 }
 
+.contact .contact_info>span {
+  color: #4D4D4D;
+  font-family: var(--pixel_R);
+  font-size: 0.875rem;
+}
+
 .contact .contact_info .info {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.contact .contact_info .info span {
+  font-family: var(--pixel_R);
 }
 
 .contact .contact_info .info>div {
@@ -1079,13 +1107,18 @@ header h1 {
     height: 80px;
   }
 
+  #main .mainContents>.btns {
+    top: 20px;
+    gap: 4px;
+  }
+
   .ms_inner {
     width: 90%;
   }
 
   #main {
     flex-direction: column;
-    height: 88vh;
+    height: 86vh;
   }
 
   #main .mainContents>.btns {
@@ -1170,6 +1203,7 @@ header h1 {
   .mainContents .m_inner {
     height: 100%;
     padding: 1.5rem;
+    padding-right: 1rem;
   }
 
   #main .deco {
@@ -1214,7 +1248,7 @@ header h1 {
 
   .profile .top .p_img {
     grid-column: 1;
-    grid-row: 1/3; 
+    grid-row: 1/3;
     overflow: hidden;
     background-image: url(/common/profile.jpg);
     background-position: center;
@@ -1242,6 +1276,11 @@ header h1 {
     max-width: 100%;
   }
 
+  .about .aboutMe .about_contents .text p {
+    padding-right: 0;
+  }
+
+
   .projectBtns {
     height: 100%;
     align-content: center;
@@ -1259,7 +1298,7 @@ header h1 {
 
   .swiper-pagination-bullet-active {
     background-color: #22A1CE;
-}
+  }
 }
 
 
@@ -1269,6 +1308,14 @@ header h1 {
   }
 
   .projectBtns .swiper-wrapper .category_item button {
+    font-size: 0.9rem;
+  }
+
+  .about .detail .experience .exp_contents .work ul li {
+    font-size: 0.9rem;
+  }
+
+  .projectList .p_item .p_contents .text .info {
     font-size: 0.9rem;
   }
 
@@ -1309,7 +1356,7 @@ header h1 {
     width: auto;
     flex-direction: row;
     justify-content: start;
-    gap : 1.5rem;
+    gap: 1.5rem;
     padding: 0;
   }
 
@@ -1330,6 +1377,15 @@ header h1 {
 
   header h1 img {
     width: 80%
+  }
+
+  .ms_inner {
+    padding-right: 16px;
+    width: 100%;
+  }
+
+  #main {
+    width: 100%;
   }
 
   #main .subContents {
@@ -1364,27 +1420,218 @@ header h1 {
 
   .profile {
     display: block;
+  }
+
+  .profile .top {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .profile .top .p_text {
+    text-align: center;
+  }
+
+  .profile .top .p_text p {
+    display: inline-block;
+    text-align: left;
+  }
+
+  #main .deco {
+    display: none;
+  }
+
+  #main .mainContents>.btns {
+    width: fit-content;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4px;
+    top: 7px;
+    left: 40px;
+  }
+
+  #main .mainContents>.btns button {
+    width: 6rem;
+    height: 36px;
+    border-radius: 8px 8px 0 0;
+    border-left: 1px solid #383838;
+    border-bottom: none;
+  }
+
+  .mainContents .m_bg {
+    padding-top: 43px;
+  }
 }
 
-.profile .top {
-  width: 100%;
-  max-width: 100%;
-  grid-template-columns: 1fr 2fr;
+
+@media screen and (max-width: 700px) {
+  .home .post {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .home .post .p_left {
+    margin-bottom: 20px;
+  }
+
+  .about .aboutMe .about_contents {
+    flex-direction: column;
+  }
+
+  .about .aboutMe .about_contents figure {
+    flex-basis: auto;
+  }
+
+  .about .aboutMe .about_contents .text {
+    flex-basis: auto;
+  }
+
+  .about .aboutMe .about_contents .text p {
+    font-size: 1.1rem;
+  }
+
+  .about .skill .skill_contents ul li figure {
+    flex-basis: 30%;
+  }
+
+  .about .skill .skill_contents ul li .text {
+    flex-basis: 70%;
+  }
+
+  .about .detail {
+    flex-direction: column;
+  }
+
+  .projectList .p_item .p_contents {
+    flex-direction: column;
+  }
+
+  .projectList .p_item .p_contents .text {
+    flex-basis: 140px;
+  }
+
+  .contact .contact_info {
+    height: auto;
+    flex-direction: column;
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  .contact .contact_info .info {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
-.profile .top .p_text {
-  text-align: center;
+
+@media screen and (max-width: 500px) {
+
+  #main .mainContents>.btns {
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+  #main .mainContents>.btns button {
+    width: 16vw;
+  }
+
+  .about .aboutMe .about_contents .text p br {
+    display: none;
+  }
+
+  .about .aboutMe .about_contents .text h2 br {
+    display: block;
+  }
+
+  .about .aboutMe .about_contents .text h2 {
+    line-height: 160%;
+    margin-bottom: 1.2rem;
+  }
+
+  .profile .top {
+    grid-template-columns: 1.5fr 2fr;
+  }
+
+  .profile .top .p_text {
+    text-align: left;
+  }
+
+  .contact .contact_title h2 {
+    font-size: 1.3rem;
+  }
 }
 
-.profile .top .p_text p {
-  display: inline-block;
-  text-align: left;
+
+@media screen and (max-width: 430px) {
+
+  #side .side_contents .per {
+    gap: 1rem;
+  }
+
+  .subContents .s_bg .t_title h2 {
+    font-size: 3.8vw;
+  }
+
+  #main .mainContents>.btns button {
+    height: 32px;
+  }
+
+  .mainContents .m_bg {
+    padding-top: 38px;
+  }
+
+  .profile .top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile .top .today {
+    flex-wrap: wrap;
+  }
+
+  .profile .top .today span:first-of-type {
+    flex-basis: 100%;
+  }
+
+  .profile .top .today figure {
+    margin-left: 0;
+  }
+
+  .profile .top .today {
+    height: auto;
+    justify-content: left;
+    border: none;
+    gap: 4px 0;
+  }
+
+  .profile .top .p_text p {
+    font-size: 0.9rem;
+  }
 }
 
-#main .deco {
-  display: none;
+
+@media screen and (max-width: 390px) {
+
+
+  #main .subContents {
+    min-height: 230px;
+  }
+
+  .profile .top {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  #main .mainContents>.btns button {
+    font-size: 1rem;
+  }
 }
 
 
-}
 
+@media screen and (max-width:365px) {
+
+  .profile .top {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+}
