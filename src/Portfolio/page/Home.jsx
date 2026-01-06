@@ -34,12 +34,12 @@ const Home = () => {
         <div className="p_right">
           <ul>
             <li>
-              <span>쥬크박스 1</span>
-              <span>사진첩 5</span>
+              <span>쥬크박스 0/3</span>
+              <span>사진첩 5/50</span>
             </li>
             <li>
-              <span>즐겨찾기 3</span>
-              <span>방명록 3</span>
+              <span>즐겨찾기 0/3</span>
+              <span>방명록 3/20</span>
             </li>
             <li></li>
           </ul>
